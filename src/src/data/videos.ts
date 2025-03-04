@@ -1,9 +1,10 @@
+import {bocchithumb} from "public/bocchithumb.webp"
 
 export const videos = [
   {
     id: "U8iSngqYiVw",
     title: "Bocchi X The Beatles",
-    thumbnail: "/bocchithumb.webp",
+    thumbnail: bocchithumb,
     thumbnailstatic: "https://i.ytimg.com/vi/U8iSngqYiVw/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AG2CIAC0AWKAgwIABABGFYgWShlMA8=&rs=AOn4CLCIcQEoQmkGoSQXRp9abpmtv34W1Q",
     category: "amv",
     description: "Here Comes The ☀️!"

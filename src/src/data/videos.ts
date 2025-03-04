@@ -1,4 +1,6 @@
-import {bocchithumb} from "/bocchithumb.webp"
+import bocchithumb from "../thumbArchives/bocchithumb.webp"
+
+
 export const videos = [
   {
     id: "U8iSngqYiVw",

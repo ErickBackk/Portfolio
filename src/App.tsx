@@ -18,6 +18,12 @@ function App() {
       
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden">
+        <img 
+              src="https://cdn.discordapp.com/attachments/824606051743039528/1346577207476359251/Comp1_1-ezgif.com-video-to-webp-converter.webp?ex=67c8b140&is=67c75fc0&hm=6c4ec315bf3f7ce6a709193ae0788124937628034eca0409d5b018b730e478d3&" 
+              alt="EuSouOBackk" 
+              className="h-[80vh] w-full absolute -top-20 blur-[8px] "
+        />
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Blue light effects */}
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px]"></div>

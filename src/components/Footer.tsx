@@ -11,13 +11,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center gap-2">
-              <div className="bg-blue-600 p-2 rounded-full">
-                <Youtube size={24} className="text-white" />
-              </div>
-              <span className="text-xl font-bold">EuSouOBackk</span>
             </a>
             <p className="text-gray-400 mt-2 max-w-md">
-              Creating stunning MMV & AMV content that brings anime and manga to life through music.
+              MMV & AMV content for anime, manga and music enthusiasts.
             </p>
           </div>
           
@@ -33,10 +29,10 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-gray-400 text-sm">
-              Made with <Heart size={14} className="inline text-red-500" /> for anime and manga fans
+              Made with <Heart size={14} className="inline text-red-500" /> for anime, manga and music fans
             </p>
             <p className="text-gray-500 text-xs mt-1">
-              © {new Date().getFullYear()} EuSouOBackk. All rights reserved.
+              © {new Date().getFullYear()} Backk. All rights reserved.
             </p>
           </div>
         </div>

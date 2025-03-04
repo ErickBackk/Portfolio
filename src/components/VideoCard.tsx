@@ -18,8 +18,10 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
+
+    
     <div 
-      className="bg-gradient-to-br from-blue-900/50 to-blue-800/30 rounded-xl overflow-hidden group shadow-lg"
+      className="bg-gradient-to-br from-black to-gray-950 rounded-xl overflow-hidden group shadow-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -36,12 +38,12 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
             href={`https://www.youtube.com/watch?v=${video.id}`} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-red-600 hover:bg-red-700 transition-colors p-4 rounded-full"
+            className="transition-colors p-4 w-full h-full flex items-center justify-center"
           >
             <Play size={24} fill="white" />
           </a>
         </div>
-        <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-500 to-cyan-400 text-xs font-bold px-2 py-1 rounded-full">
+        <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-500 to-blue-500 text-xs font-bold px-2 py-1 rounded-full">
           {video.category.toUpperCase()}
         </div>
       </div>
@@ -55,7 +57,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
           className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
         >
           Watch on YouTube <ExternalLink size={14} />
-        </a>
+        </a>    
       </div>
     </div>
   );

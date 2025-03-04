@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Youtube, Heart, ExternalLink } from 'lucide-react';
+import { Youtube, Heart, ExternalLink, Camera, Clapperboard, Star } from 'lucide-react';
 import Navbar from './components/Navbar';
 import VideoCard from './components/VideoCard';
 import Footer from './components/Footer';
@@ -42,8 +42,11 @@ function App() {
               className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-blue-500 shadow-lg shadow-blue-500/20"
             />
           </div>
-          <p className="text-xl md:text-2xl max-w-2xl mb-8">
-            Stunning MMV & AMV creations that blend music and visuals into captivating experiences
+          <p className="text-xl md:text-2xl max-w-2xl mb-1">
+            MMV & AMV Creator Content
+          </p>
+          <p className="text-xl md:text-2xl max-w-2xl mb-8 font-semibold">
+            Overall Editor
           </p>
           <div className="flex gap-4">
             <a 
@@ -53,14 +56,14 @@ function App() {
               className="flex items-center gap-2 bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded-full font-medium"
             >
               <Youtube size={20} />
-              YouTube Channel
+              YouTube
             </a>
             <a 
               href="#videos" 
               className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-medium"
             >
-              <Heart size={20} />
-              Explore Videos
+              <Camera size={20} />
+              Videos
             </a>
           </div>
         </div>
@@ -75,21 +78,19 @@ function App() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">About The Channel</h2>
           <p className="text-lg text-gray-300 mb-8">
-            EuSouOBackk is dedicated to creating high-quality MMVs (Music Manga Videos) and AMVs (Anime Music Videos) 
-            that combine stunning visuals with perfectly synchronized music. Each video is crafted with passion and 
-            attention to detail, creating an immersive experience that brings anime and manga to life through music.
+            Channel dedicated to jobs/editing, MMVs (Music Manga Videos) and AMV (Anime Music Videos) or any thing using After Effects
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="bg-black/50 border border-blue-900/50 p-6 rounded-xl backdrop-blur-sm shadow-lg shadow-blue-500/5">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart size={28} />
+                <Clapperboard size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Passionate Editing</h3>
-              <p className="text-gray-400">Each video is meticulously edited with love and attention to detail</p>
+              <h3 className="text-xl font-semibold mb-2">Process</h3>
+              <p className="text-gray-400">Each video is meticulously edited with creativity and attention to detail</p>
             </div>
             <div className="bg-black/50 border border-blue-900/50 p-6 rounded-xl backdrop-blur-sm shadow-lg shadow-blue-500/5">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Youtube size={28} />
+                <Star size={28} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality Content</h3>
               <p className="text-gray-400">High-quality visuals synchronized perfectly with carefully selected music</p>
@@ -99,7 +100,7 @@ function App() {
                 <ExternalLink size={28} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Growing Community</h3>
-              <p className="text-gray-400">Join a community of anime and manga enthusiasts who appreciate artistic AMVs</p>
+              <p className="text-gray-400">Part of a community of anime and manga enthusiasts who appreciate artistic AMVs</p>
             </div>
           </div>
         </div>

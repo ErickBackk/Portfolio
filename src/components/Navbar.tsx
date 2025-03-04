@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Youtube } from 'lucide-react';
+import { Menu, X, Youtube, ListStart, Video } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,23 +25,25 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="#" className="flex items-center gap-2">
-            <div className="bg-blue-600 p-2 rounded-full">
-              <Youtube size={24} className="text-white" />
-            </div>
-            <span className="text-xl font-bold">EuSouOBackk</span>
+             <img 
+              src="https://yt3.googleusercontent.com/xIwL1F5HTg0c7zhkajS9YeeM03P9qU5y8UOHir2uQWkxngr5ffbEVCgMfcdNl4XC3dZnphg4=s160-c-k-c0x00ffffff-no-rj" 
+              alt="EuSouOBackk" 
+              className="w-10 h-10 md:w-10 md:h-10 rounded-full shadow-lg shadow-blue-500/20"
+            />
+            <span className="text-xl font-bold">Backk</span>
           </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-white hover:text-blue-400 transition-colors">Home</a>
-            <a href="#videos" className="text-white hover:text-blue-400 transition-colors">Videos</a>
+            <a href="#" className="text-white hover:text-blue-400 transition-colors"><ListStart size={20} /></a>
+            <a href="#videos" className="text-white hover:text-blue-400 transition-colors"><Video size={20} /></a>
             <a 
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors"
+              className="text-white hover:text-blue-400 rounded-full transition-colors"
             >
-              YouTube Channel
+              <Youtube size={20} />
             </a>
           </div>
 
@@ -61,25 +63,25 @@ const Navbar = () => {
           <div className="flex flex-col gap-4">
             <a 
               href="#" 
-              className="text-white hover:text-blue-400 transition-colors py-2"
+              className="rounded-full text-white hover:text-blue-400 transition-colors flex justify-center"
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              <ListStart size={30} />
             </a>
             <a 
               href="#videos" 
-              className="text-white hover:text-blue-400 transition-colors py-2"
+              className="rounded-full text-white hover:text-blue-400 transition-colors flex justify-center"
               onClick={() => setIsMenuOpen(false)}
             >
-              Videos
+              <Video size={30} />
             </a>
             <a 
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors text-center"
+              className="rounded-full transition-colors text-white hover:text-blue-400 text-center flex justify-center"
             >
-              YouTube Channel
+              <Youtube size={30} />
             </a>
           </div>
         </div>

@@ -1,8 +1,9 @@
+
 export const videos = [
   {
     id: "U8iSngqYiVw",
     title: "Bocchi X The Beatles",
-    thumbnail: "public/bocchithumb.webp",
+    thumbnail: "/bocchithumb.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/U8iSngqYiVw/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AG2CIAC0AWKAgwIABABGFYgWShlMA8=&rs=AOn4CLCIcQEoQmkGoSQXRp9abpmtv34W1Q",
     category: "amv",
     description: "Here Comes The ☀️!"
@@ -10,7 +11,7 @@ export const videos = [
   {
     id: "qATOucGhf2s",
     title: "Demo Reel 2024",
-    thumbnail: "public/demoreel.webp",
+    thumbnail: "/demoreel.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/qATOucGhf2s/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCD2mFU-QNMyHs9wkQMgjs1VkV4OA",
     category: "amv",
     description: "Ano bom repleto de coisas ruins, obrigado a todos que participaram desse ano incrível 💞"
@@ -18,7 +19,7 @@ export const videos = [
   {
     id: "7g-gBZcqDk8",
     title: "Nian from Arknights animation",
-    thumbnail: "public/nian.webp",
+    thumbnail: "/nian.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/7g-gBZcqDk8/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCneZxdqPqtWEWvR1b38WXoR3SwVg",
     category: "mmv",
     description: "Nian from Arknights animation"
@@ -26,7 +27,7 @@ export const videos = [
   {
     id: "2hTmbv0fF6I",
     title: "‪@Eeiris‬ Fan Animation",
-    thumbnail: "public/eeiris.webp",
+    thumbnail: "/eeiris.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/2hTmbv0fF6I/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGFIgOCh_MA8=&rs=AOn4CLAeqB8HEFZI0hJiwVQ6sDgFHhE2Xg",
     category: "mmv",
     description: "Fan Animation"
@@ -42,7 +43,7 @@ export const videos = [
   {
     id: "WBU6P2YZO7g",
     title: "Comissão | Elite da Lua | Luas Superiores (Demon Slayer) | ‪@aSakyy‬ 1/2",
-    thumbnail: "public/elite.webp",
+    thumbnail: "/elite.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/WBU6P2YZO7g/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgUyhiMA8=&rs=AOn4CLAHc4ddS6paYfSsMbKlvesxyHmUJA",
     category: "mmv",
     description: ""
@@ -50,7 +51,7 @@ export const videos = [
   {
     id: "HpGxUTB25K8",
     title: "Comission ‪@aSakyy‬ Liberdade | Maki Z̶e̶n̶i̶n̶ (Jujutsu Kaisen) pt. 2",
-    thumbnail: "public/maki.webp",
+    thumbnail: "/maki.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/HpGxUTB25K8/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGEwgZShYMA8=&rs=AOn4CLAxGxffU_yWYlRG4RP8OGUiHuLlbw",
     category: "mmv",
     description: ""
@@ -58,7 +59,7 @@ export const videos = [
   {
     id: "5-JE4pChW0U",
     title: "Shaman - Guerra (Reedit)",
-    thumbnail: "public/mitaka.webp",
+    thumbnail: "/mitaka.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/5-JE4pChW0U/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGH8gGygVMA8=&rs=AOn4CLAUQdRy5sGN5ioKjKbf1pKJ2Ys1TA",
     category: "mmv",
     description: ""
@@ -66,7 +67,7 @@ export const videos = [
   {
     id: "5E_JG71rYrI",
     title: "Reedição | Sol - ‪@Shaman_‬",
-    thumbnail: "public/oneshot.webp",
+    thumbnail: "/oneshot.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/5E_JG71rYrI/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA1-j-jHSoykWbQFed92DvFlkbGMA",
     category: "mmv",
     description: ""
@@ -82,7 +83,7 @@ export const videos = [
   {
     id: "VdP9bx7yCvQ",
     title: "White noise‬",
-    thumbnail: "public/whitenoise.webp",
+    thumbnail: "/whitenoise.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/VdP9bx7yCvQ/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGFogYShlMA8=&rs=AOn4CLDSTMR2bnGoni6ZFrn_JE4XZ19Nzw",
     category: "amv",
     description: ""

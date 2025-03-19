@@ -1,5 +1,13 @@
 export const videos = [
   {
+    id: "1pZZeMO_zLo",
+    title: "Comission Cloudz",
+    thumbnail: "https://i.ytimg.com/an_webp/qATOucGhf2s/mqdefault_6s.webp?du=3000&sqp=CLXjnb4G&rs=AOn4CLAFMvK3HgaPK4vXGw0kPqX2o1oyvg",
+    thumbnailstatic: "https://i.ytimg.com/vi/1pZZeMO_zLo/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGHIgTCg5MA8=&rs=AOn4CLDXrc2g31HxZttm4w8F-giglFrcrA",
+    category: "mmv",
+    description: ""
+  },
+  {
     id: "U8iSngqYiVw",
     title: "Bocchi X The Beatles",
     thumbnail: "https://i.ytimg.com/an_webp/U8iSngqYiVw/mqdefault_6s.webp?du=3000&sqp=CKiKnr4G&rs=AOn4CLB2wC6LDOd0vuFRkVR2lpxvmA-6pw",
@@ -85,14 +93,6 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/an_webp/VdP9bx7yCvQ/mqdefault_6s.webp?du=3000&sqp=CMyFnr4G&rs=AOn4CLCBsWXZ0z4AJDWCrNjbC-OfctCU4A",
     thumbnailstatic: "https://i.ytimg.com/vi/VdP9bx7yCvQ/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGFogYShlMA8=&rs=AOn4CLDSTMR2bnGoni6ZFrn_JE4XZ19Nzw",
     category: "amv",
-    description: ""
-  },
-    {
-    id: "1pZZeMO_zLo",
-    title: "Comission Cloudz",
-    thumbnail: "https://i.ytimg.com/an_webp/qATOucGhf2s/mqdefault_6s.webp?du=3000&sqp=CLXjnb4G&rs=AOn4CLAFMvK3HgaPK4vXGw0kPqX2o1oyvg",
-    thumbnailstatic: "https://i.ytimg.com/vi/1pZZeMO_zLo/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGHIgTCg5MA8=&rs=AOn4CLDXrc2g31HxZttm4w8F-giglFrcrA",
-    category: "mmv",
     description: ""
   },
 ];

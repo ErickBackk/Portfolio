@@ -87,4 +87,12 @@ export const videos = [
     category: "amv",
     description: ""
   },
+    {
+    id: "1pZZeMO_zLo",
+    title: "Comission Cloudz",
+    thumbnail: "https://i.ytimg.com/an_webp/qATOucGhf2s/mqdefault_6s.webp?du=3000&sqp=CLXjnb4G&rs=AOn4CLAFMvK3HgaPK4vXGw0kPqX2o1oyvg",
+    thumbnailstatic: "https://i.ytimg.com/vi/1pZZeMO_zLo/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGHIgTCg5MA8=&rs=AOn4CLDXrc2g31HxZttm4w8F-giglFrcrA",
+    category: "mmv",
+    description: ""
+  },
 ];

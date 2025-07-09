@@ -15,21 +15,21 @@ function App() {
     : videos.filter(video => video.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[80vh] overflow-hidden bg-gradient-to-b from-blue-950/50 to-slate-900/80">
+      <section className="relative h-[80vh] overflow-hidden bg-gradient-to-b from-slate-950/80 to-slate-900/90">
         <img 
               src="https://cdn.discordapp.com/attachments/824606051743039528/1346577207476359251/Comp1_1-ezgif.com-video-to-webp-converter.webp?ex=67c8b140&is=67c75fc0&hm=6c4ec315bf3f7ce6a709193ae0788124937628034eca0409d5b018b730e478d3&" 
               alt="EuSouOBackk" 
               className="h-[80vh] w-full absolute -top-20 blur-[8px] "
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/70 via-slate-900/80 to-blue-950/90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/90 to-slate-950/95 z-10"></div>
         {/* Blue light effects */}
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-r from-blue-500/30 to-cyan-400/20 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-gradient-to-l from-blue-400/25 to-indigo-500/20 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-cyan-500/15 to-blue-600/10 rounded-full blur-[100px]"></div>
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-r from-blue-500/15 to-cyan-400/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-gradient-to-l from-blue-400/12 to-indigo-500/8 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-cyan-500/8 to-blue-600/5 rounded-full blur-[100px]"></div>
         <div className="absolute inset-0 z-0">
           <video 
             className="w-full h-full object-cover"
@@ -52,7 +52,7 @@ function App() {
           <p className="text-xl md:text-2xl max-w-2xl mb-1 bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
             {t('hero.creator')}
           </p>
-          <p className="text-xl md:text-2xl max-w-2xl mb-8 font-semibold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+          <p className="text-xl md:text-2xl max-w-2xl mb-8 font-semibold bg-gradient-to-r from-slate-200 to-blue-200 bg-clip-text text-transparent">
             {t('hero.editor')}
           </p>
           <div className="flex gap-4">
@@ -77,16 +77,16 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 container mx-auto px-4 relative bg-gradient-to-b from-slate-900/50 to-blue-950/30">
+      <section className="py-20 container mx-auto px-4 relative bg-gradient-to-b from-slate-950/60 to-slate-900/80">
         {/* Blue light effects */}
-        <div className="absolute -left-40 top-1/4 w-80 h-80 bg-gradient-to-r from-blue-500/15 to-indigo-500/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute -right-40 bottom-1/4 w-80 h-80 bg-gradient-to-l from-cyan-400/15 to-blue-500/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute -left-40 top-1/4 w-80 h-80 bg-gradient-to-r from-blue-500/8 to-indigo-500/5 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute -right-40 bottom-1/4 w-80 h-80 bg-gradient-to-l from-cyan-400/8 to-blue-500/5 rounded-full blur-[120px] animate-pulse"></div>
         
-        <div className="max-w-4xl mx-auto text-center relative z-10 backdrop-blur-sm bg-gradient-to-br from-slate-800/20 to-blue-900/20 rounded-3xl p-8 border border-blue-500/20">
+        <div className="max-w-4xl mx-auto text-center relative z-10 backdrop-blur-sm bg-gradient-to-br from-slate-900/30 to-slate-800/40 rounded-3xl p-8 border border-blue-500/10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-cyan-200 to-blue-300 bg-clip-text text-transparent">
             {t('about.title')}
           </h2>
-          <p className="text-lg text-blue-100/80 mb-8 leading-relaxed">
+          <p className="text-lg text-slate-300/80 mb-8 leading-relaxed">
             {t('about.description')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -95,23 +95,23 @@ function App() {
       </section>
 
       {/* Videos Section */}
-      <section id="videos" className="py-20 container mx-auto px-4 relative bg-gradient-to-b from-blue-950/30 to-slate-900/50">
+      <section id="videos" className="py-20 container mx-auto px-4 relative bg-gradient-to-b from-slate-900/60 to-slate-950/80">
         {/* Blue light effects */}
-        <div className="absolute left-1/4 top-0 w-96 h-96 bg-gradient-to-br from-blue-500/15 to-cyan-400/10 rounded-full blur-[140px] animate-pulse"></div>
-        <div className="absolute right-1/4 bottom-0 w-96 h-96 bg-gradient-to-bl from-indigo-400/15 to-blue-600/10 rounded-full blur-[140px] animate-pulse"></div>
+        <div className="absolute left-1/4 top-0 w-96 h-96 bg-gradient-to-br from-blue-500/8 to-cyan-400/5 rounded-full blur-[140px] animate-pulse"></div>
+        <div className="absolute right-1/4 bottom-0 w-96 h-96 bg-gradient-to-bl from-indigo-400/8 to-blue-600/5 rounded-full blur-[140px] animate-pulse"></div>
         
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center relative z-10 bg-gradient-to-r from-blue-200 via-cyan-200 to-blue-300 bg-clip-text text-transparent">
           {t('videos.title')}
         </h2>
         
         <div className="flex justify-center mb-8 relative z-10">
-          <div className="inline-flex bg-gradient-to-r from-slate-800/80 to-blue-900/60 backdrop-blur-md border border-blue-500/30 rounded-full p-1 shadow-lg shadow-blue-500/20">
+          <div className="inline-flex bg-gradient-to-r from-slate-900/80 to-slate-800/90 backdrop-blur-md border border-blue-500/15 rounded-full p-1 shadow-lg shadow-blue-500/10">
             <button 
               onClick={() => setActiveCategory('all')}
               className={`px-4 py-2 rounded-full transition-all duration-300 ${
                 activeCategory === 'all' 
                   ? 'bg-gradient-to-r from-blue-600 to-cyan-600 shadow-lg shadow-blue-600/40 text-white' 
-                  : 'hover:bg-gradient-to-r hover:from-blue-900/50 hover:to-cyan-900/30 text-blue-200'
+                  : 'hover:bg-gradient-to-r hover:from-slate-800/60 hover:to-slate-700/70 text-slate-300'
               }`}
             >
               {t('videos.all')}
@@ -121,7 +121,7 @@ function App() {
               className={`px-4 py-2 rounded-full transition-all duration-300 ${
                 activeCategory === 'mmv' 
                   ? 'bg-gradient-to-r from-blue-600 to-cyan-600 shadow-lg shadow-blue-600/40 text-white' 
-                  : 'hover:bg-gradient-to-r hover:from-blue-900/50 hover:to-cyan-900/30 text-blue-200'
+                  : 'hover:bg-gradient-to-r hover:from-slate-800/60 hover:to-slate-700/70 text-slate-300'
               }`}
             >
               MMV
@@ -131,7 +131,7 @@ function App() {
               className={`px-4 py-2 rounded-full transition-all duration-300 ${
                 activeCategory === 'amv' 
                   ? 'bg-gradient-to-r from-blue-600 to-cyan-600 shadow-lg shadow-blue-600/40 text-white' 
-                  : 'hover:bg-gradient-to-r hover:from-blue-900/50 hover:to-cyan-900/30 text-blue-200'
+                  : 'hover:bg-gradient-to-r hover:from-slate-800/60 hover:to-slate-700/70 text-slate-300'
               }`}
             >
               AMV

@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-slate-800 py-12">
+    <footer className="relative border-t border-slate-800 py-12 z-10 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Left side */}

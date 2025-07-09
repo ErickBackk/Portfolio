@@ -22,12 +22,12 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   
   return (
     <div 
-      className="group cursor-pointer"
+      className="group cursor-pointer backdrop-blur-sm bg-[#000514]/20 rounded-lg p-4 border border-slate-800/50 hover:border-slate-700/50 transition-all duration-300 hover:bg-[#000514]/30"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video thumbnail */}
-      <div className="relative aspect-video mb-4 overflow-hidden rounded-lg bg-[#000514]">
+      <div className="relative aspect-video mb-4 overflow-hidden rounded-lg bg-[#000514]/60">
         <img 
           src={isHovered ? video.thumbnail : (video.thumbnailstatic || video.thumbnail)}
           alt={video.title} 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Play, ExternalLink } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface Video {
   id: string;
@@ -8,6 +9,7 @@ interface Video {
   thumbnailstatic?: string;
   category: string;
   description: string;
+  descriptionKey?: string;
 }
 
 interface VideoCardProps {
@@ -16,6 +18,7 @@ interface VideoCardProps {
 
 const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useLanguage();
   
   return (
 
@@ -49,14 +52,16 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
       </div>
       <div className="p-4">
         <h3 className="text-lg font-semibold mb-2 line-clamp-1">{video.title}</h3>
-        <p className="text-gray-400 text-sm mb-4 line-clamp-2">{video.description}</p>
+        <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+          {video.descriptionKey ? t(video.descriptionKey) : video.description}
+        </p>
         <a 
           href={`https://www.youtube.com/watch?v=${video.id}`} 
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
         >
-          Watch on YouTube <ExternalLink size={14} />
+          {t('videos.watch')} <ExternalLink size={14} />
         </a>    
       </div>
     </div>

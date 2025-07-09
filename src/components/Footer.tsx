@@ -1,7 +1,10 @@
 import React from 'react';
 import { Youtube, Heart } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-black border-t border-blue-900/30 py-12 relative">
       {/* Blue light effect */}
@@ -13,7 +16,7 @@ const Footer = () => {
             <a href="#" className="flex items-center gap-2">
             </a>
             <p className="text-gray-400 mt-2 max-w-md">
-              Overall editor.
+              {t('footer.description')}
             </p>
           </div>
           
@@ -29,10 +32,10 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-gray-400 text-sm">
-              Made with <Heart size={14} className="inline text-red-500" /> for anime, manga and music fans
+              {t('footer.made')} <Heart size={14} className="inline text-red-500" /> {t('footer.for')}
             </p>
             <p className="text-gray-500 text-xs mt-1">
-              © {new Date().getFullYear()} Backk. All rights reserved.
+              © {new Date().getFullYear()} Backk. {t('footer.rights')}
             </p>
           </div>
         </div>

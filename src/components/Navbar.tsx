@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Youtube, ListStart, Video } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,16 +38,22 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-white hover:text-blue-400 transition-colors"><ListStart size={20} /></a>
-            <a href="#videos" className="text-white hover:text-blue-400 transition-colors"><Video size={20} /></a>
+            <a href="#" className="text-white hover:text-blue-400 transition-colors" title={t('nav.home')}>
+              <ListStart size={20} />
+            </a>
+            <a href="#videos" className="text-white hover:text-blue-400 transition-colors" title={t('nav.videos')}>
+              <Video size={20} />
+            </a>
             <a 
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 rounded-full transition-colors"
+              title="YouTube"
             >
               <Youtube size={20} />
             </a>
+            <LanguageToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -63,26 +72,32 @@ const Navbar = () => {
           <div className="flex flex-col gap-4">
             <a 
               href="#" 
-              className="rounded-full text-white hover:text-blue-400 transition-colors flex justify-center"
+              className="rounded-full text-white hover:text-blue-400 transition-colors flex justify-center items-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
               <ListStart size={30} />
+              <span>{t('nav.home')}</span>
             </a>
             <a 
               href="#videos" 
-              className="rounded-full text-white hover:text-blue-400 transition-colors flex justify-center"
+              className="rounded-full text-white hover:text-blue-400 transition-colors flex justify-center items-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
               <Video size={30} />
+              <span>{t('nav.videos')}</span>
             </a>
             <a 
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="rounded-full transition-colors text-white hover:text-blue-400 text-center flex justify-center"
+              className="rounded-full transition-colors text-white hover:text-blue-400 text-center flex justify-center items-center gap-2"
             >
               <Youtube size={30} />
+              <span>YouTube</span>
             </a>
+            <div className="flex justify-center">
+              <LanguageToggle />
+            </div>
           </div>
         </div>
       )}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Youtube, Heart, ExternalLink, Camera, Clapperboard, Star } from 'lucide-react';
+import { useLanguage } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import VideoCard from './components/VideoCard';
 import Footer from './components/Footer';
@@ -7,6 +8,7 @@ import { videos } from './data/videos';
 
 function App() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const { t } = useLanguage();
   
   const filteredVideos = activeCategory === 'all' 
     ? videos 
@@ -49,10 +51,10 @@ function App() {
             />
           </div>
           <p className="text-xl md:text-2xl max-w-2xl mb-1">
-            Creator Content
+            {t('hero.creator')}
           </p>
           <p className="text-xl md:text-2xl max-w-2xl mb-8 font-semibold">
-            Overall Editor
+            {t('hero.editor')}
           </p>
           <div className="flex gap-4">
             <a 
@@ -62,14 +64,14 @@ function App() {
               className="flex items-center gap-2 bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded-full font-medium"
             >
               <Youtube size={20} />
-              YouTube
+              {t('hero.youtube')}
             </a>
             <a 
               href="#videos" 
               className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-medium"
             >
               <Camera size={20} />
-              Videos
+              {t('hero.videos')}
             </a>
           </div>
         </div>
@@ -82,9 +84,9 @@ function App() {
         <div className="absolute -right-40 bottom-1/4 w-80 h-80 bg-blue-400/10 rounded-full blur-[100px]"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">About The Channel</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('about.title')}</h2>
           <p className="text-lg text-gray-300 mb-8">
-            Channel dedicated to jobs/editing, or any thing using After Effects and edit concepts.
+            {t('about.description')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           </div>
@@ -97,7 +99,7 @@ function App() {
         <div className="absolute left-1/4 top-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
         <div className="absolute right-1/4 bottom-0 w-96 h-96 bg-blue-400/10 rounded-full blur-[120px]"></div>
         
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center relative z-10">Featured Videos</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center relative z-10">{t('videos.title')}</h2>
         
         <div className="flex justify-center mb-8 relative z-10">
           <div className="inline-flex bg-black border border-blue-900/50 rounded-full p-1">
@@ -105,7 +107,7 @@ function App() {
               onClick={() => setActiveCategory('all')}
               className={`px-4 py-2 rounded-full ${activeCategory === 'all' ? 'bg-blue-600' : 'hover:bg-blue-900/50'}`}
             >
-              All
+              {t('videos.all')}
             </button>
             <button 
               onClick={() => setActiveCategory('mmv')}

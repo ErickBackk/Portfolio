@@ -11,9 +11,10 @@ const Footer = () => {
       <div className="absolute left-1/4 top-0 w-96 h-32 bg-gradient-to-r from-blue-500/15 to-cyan-400/10 rounded-full blur-[100px] animate-pulse"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 transition-all duration-300 p-3 rounded-full shadow-lg shadow-red-600/30 hover:shadow-red-600/50 hover:scale-110"
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center gap-2">
+              <span className="text-xl font-bold text-white">Backk</span>
             </a>
             <p className="text-blue-200/70 mt-2 max-w-md">
               {t('footer.description')}

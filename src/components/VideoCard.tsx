@@ -27,7 +27,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video thumbnail */}
-      <div className="relative aspect-video mb-4 overflow-hidden rounded-lg bg-slate-900">
+      <div className="relative aspect-video mb-4 overflow-hidden rounded-lg bg-[#000514]">
         <img 
           src={isHovered ? video.thumbnail : (video.thumbnailstatic || video.thumbnail)}
           alt={video.title} 
@@ -51,7 +51,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         </div>
         
         {/* Category badge */}
-        <div className="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-xs font-medium px-2 py-1 rounded text-slate-300">
+        <div className="absolute top-3 right-3 bg-[#000514]/80 backdrop-blur-sm text-xs font-medium px-2 py-1 rounded text-slate-300">
           {video.category.toUpperCase()}
         </div>
       </div>

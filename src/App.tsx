@@ -15,7 +15,7 @@ function App() {
     : videos.filter(video => video.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-[#000000] text-white">
       <Navbar />
       
       {/* Hero Section */}
@@ -27,7 +27,7 @@ function App() {
             alt="EuSouOBackk" 
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-slate-950/80"></div>
+          <div className="absolute inset-0 bg-[#000514]/80"></div>
         </div>
         
         {/* Subtle blue accent */}
@@ -44,13 +44,13 @@ function App() {
           </div>
           
           {/* Title and subtitle */}
-          <h1 className="text-4xl md:text-5xl font-light mb-2 text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             Backk
           </h1>
-          <p className="text-slate-400 text-lg mb-2">
+          <p className="text-slate-400 text-lg mb-2" style={{ fontFamily: 'Roboto, system-ui, sans-serif' }}>
             {t('hero.creator')}
           </p>
-          <p className="text-slate-500 mb-12">
+          <p className="text-slate-500 mb-12" style={{ fontFamily: 'Roboto, system-ui, sans-serif' }}>
             {t('hero.editor')}
           </p>
           
@@ -60,14 +60,14 @@ function App() {
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-red-600 hover:bg-red-700 transition-colors px-6 py-3 rounded-lg text-sm font-medium"
+              className="flex items-center gap-2 border-2 border-red-600 hover:border-red-500 hover:bg-red-600/10 transition-all px-6 py-3 rounded-lg text-sm font-medium text-red-600 hover:text-red-500"
             >
               <Youtube size={18} />
               {t('hero.youtube')}
             </a>
             <a 
               href="#videos" 
-              className="flex items-center gap-2 border border-slate-700 hover:border-slate-600 hover:bg-slate-900/50 transition-all px-6 py-3 rounded-lg text-sm font-medium"
+              className="flex items-center gap-2 border border-slate-700 hover:border-slate-600 hover:bg-[#000514]/50 transition-all px-6 py-3 rounded-lg text-sm font-medium"
             >
               <Camera size={18} />
               {t('hero.videos')}
@@ -79,7 +79,7 @@ function App() {
       {/* About Section */}
       <section className="py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-light mb-6 text-white">
+          <h2 className="text-3xl font-semibold mb-6 text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             {t('about.title')}
           </h2>
           <p className="text-slate-400 text-lg leading-relaxed">
@@ -91,18 +91,18 @@ function App() {
       {/* Videos Section */}
       <section id="videos" className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-light mb-12 text-center text-white">
+          <h2 className="text-3xl font-semibold mb-12 text-center text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             {t('videos.title')}
           </h2>
           
           {/* Category filter */}
           <div className="flex justify-center mb-16">
-            <div className="inline-flex bg-slate-900 border border-slate-800 rounded-lg p-1">
+            <div className="inline-flex bg-[#000514] border border-slate-800 rounded-lg p-1">
               <button 
                 onClick={() => setActiveCategory('all')}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                   activeCategory === 'all' 
-                    ? 'bg-slate-800 text-white' 
+                    ? 'bg-[#000000] text-white' 
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -112,7 +112,7 @@ function App() {
                 onClick={() => setActiveCategory('mmv')}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                   activeCategory === 'mmv' 
-                    ? 'bg-slate-800 text-white' 
+                    ? 'bg-[#000000] text-white' 
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -122,7 +122,7 @@ function App() {
                 onClick={() => setActiveCategory('amv')}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                   activeCategory === 'amv' 
-                    ? 'bg-slate-800 text-white' 
+                    ? 'bg-[#000000] text-white' 
                     : 'text-slate-400 hover:text-white'
                 }`}
               >

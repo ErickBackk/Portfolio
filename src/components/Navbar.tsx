@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-950/95 backdrop-blur-xl border-b border-slate-800' 
+        ? 'bg-[#000000]/95 backdrop-blur-xl border-b border-slate-800' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4">
@@ -75,7 +75,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-slate-950/95 backdrop-blur-xl border-t border-slate-800">
+        <div className="md:hidden bg-[#000000]/95 backdrop-blur-xl border-t border-slate-800">
           <div className="px-4 py-4 space-y-4">
             <a 
               href="#" 

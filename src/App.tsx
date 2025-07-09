@@ -49,7 +49,7 @@ function App() {
             />
           </div>
           <p className="text-xl md:text-2xl max-w-2xl mb-1">
-            MMV & AMV Creator Content
+            Creator Content
           </p>
           <p className="text-xl md:text-2xl max-w-2xl mb-8 font-semibold">
             Overall Editor
@@ -84,7 +84,7 @@ function App() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">About The Channel</h2>
           <p className="text-lg text-gray-300 mb-8">
-            Channel dedicated to jobs/editing, MMVs (Music Manga Videos) and AMV (Anime Music Videos) or any thing using After Effects
+            Channel dedicated to jobs/editing, or any thing using After Effects and edit concepts.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           </div>

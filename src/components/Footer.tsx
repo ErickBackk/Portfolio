@@ -13,7 +13,7 @@ const Footer = () => {
             <a href="#" className="flex items-center gap-2">
             </a>
             <p className="text-gray-400 mt-2 max-w-md">
-              MMV & AMV content for anime, manga and music enthusiasts.
+              Overall editor.
             </p>
           </div>
           

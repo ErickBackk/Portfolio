@@ -87,27 +87,6 @@ function App() {
             Channel dedicated to jobs/editing, MMVs (Music Manga Videos) and AMV (Anime Music Videos) or any thing using After Effects
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div className="bg-black/50 border border-blue-900/50 p-6 rounded-xl backdrop-blur-sm shadow-lg shadow-blue-500/5">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clapperboard size={28} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Process</h3>
-              <p className="text-gray-400">Each video is meticulously edited with creativity and attention to detail</p>
-            </div>
-            <div className="bg-black/50 border border-blue-900/50 p-6 rounded-xl backdrop-blur-sm shadow-lg shadow-blue-500/5">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star size={28} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Quality Content</h3>
-              <p className="text-gray-400">High-quality visuals synchronized perfectly with carefully selected music</p>
-            </div>
-            <div className="bg-black/50 border border-blue-900/50 p-6 rounded-xl backdrop-blur-sm shadow-lg shadow-blue-500/5">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ExternalLink size={28} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Growing Community</h3>
-              <p className="text-gray-400">Part of a community of anime and manga enthusiasts who appreciate artistic AMVs</p>
-            </div>
           </div>
         </div>
       </section>

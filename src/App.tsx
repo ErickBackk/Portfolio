@@ -101,7 +101,6 @@ function App() {
                 <img 
                   src="https://i.imgur.com/1byCoqA.png"
                   alt="Hero Image"
-                  className="w-full h-full object-cover rounded-2xl"
                 />
                 
                 {/* Glass overlay for extra effect */}

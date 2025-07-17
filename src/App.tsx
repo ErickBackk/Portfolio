@@ -95,7 +95,7 @@ function App() {
           
           {/* Right side - Decorative element */}
           <div className="relative hidden md:block">
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative w-5000 h-full flex items-center justify-center">
               {/* Large image placeholder with glass morphism frame */}
               <div className="relative w-5000 h-full">
                 <img 

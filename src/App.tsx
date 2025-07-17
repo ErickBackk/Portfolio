@@ -26,6 +26,9 @@ function App() {
                   alt="Hero Image"
                   className="w-full h-full"
                 />
+                
+                {/* Glass overlay for extra effect */}
+              </div>
         
         {/* Animated floating elements */}
         <div className="absolute top-20 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>

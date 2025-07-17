@@ -105,7 +105,6 @@ function App() {
                 />
                 
                 {/* Glass overlay for extra effect */}
-                <div className="absolute inset-4 rounded-2xl bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
               </div>
               
               {/* Floating elements around image */}

@@ -22,12 +22,12 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   
   return (
     <div 
-      className="group cursor-pointer backdrop-blur-md bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20"
+      className="group cursor-pointer backdrop-blur-sm bg-[#000514]/20 rounded-lg p-4 border border-slate-800/50 hover:border-slate-700/50 transition-all duration-300 hover:bg-[#000514]/30"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video thumbnail */}
-      <div className="relative aspect-video mb-4 overflow-hidden rounded-xl bg-white/5">
+      <div className="relative aspect-video mb-4 overflow-hidden rounded-lg bg-[#000514]/60">
         <img 
           src={isHovered ? video.thumbnail : (video.thumbnailstatic || video.thumbnail)}
           alt={video.title} 
@@ -44,26 +44,26 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
             rel="noopener noreferrer"
             className="w-full h-full flex items-center justify-center"
           >
-            <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-colors border border-white/30">
+            <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-colors">
               <Play size={24} fill="white" className="ml-1" />
             </div>
           </a>
         </div>
         
         {/* Category badge */}
-        <div className="absolute top-3 right-3 bg-blue-500 backdrop-blur-sm text-xs font-bold px-3 py-1 rounded-full text-white border border-white/30">
+        <div className="absolute top-3 right-3 bg-[#000514]/80 backdrop-blur-sm text-xs font-medium px-2 py-1 rounded text-slate-300">
           {video.category.toUpperCase()}
         </div>
       </div>
       
       {/* Video info */}
-      <div className="space-y-3">
-        <h3 className="text-white font-semibold line-clamp-2 leading-snug text-lg">
+      <div className="space-y-2">
+        <h3 className="text-white font-medium line-clamp-2 leading-snug">
           {video.title}
         </h3>
         
         {video.description && (
-          <p className="text-blue-100/80 text-sm line-clamp-2">
+          <p className="text-slate-400 text-sm line-clamp-2">
             {video.descriptionKey ? t(video.descriptionKey) : video.description}
           </p>
         )}
@@ -72,7 +72,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
           href={`https://www.youtube.com/watch?v=${video.id}`} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-blue-200 hover:text-white transition-colors text-sm font-medium bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/20 hover:border-white/40"
+          className="inline-flex items-center gap-1 text-slate-400 hover:text-white transition-colors text-sm"
         >
           {t('videos.watch')} <ExternalLink size={12} />
         </a>

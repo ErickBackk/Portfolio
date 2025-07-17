@@ -97,7 +97,7 @@ function App() {
           <div className="relative hidden md:block">
             <div className="relative w-full h-full flex items-center justify-center">
               {/* Large image placeholder with glass morphism frame */}
-              <div className="relative w-2200 h-2000 p-4">
+              <div className="relative w-full h-full p-4">
                 <img 
                   src="https://i.imgur.com/1byCoqA.png"
                   alt="Hero Image"

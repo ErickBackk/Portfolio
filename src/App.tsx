@@ -20,15 +20,11 @@ function App() {
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-400 via-cyan-500 to-teal-600"></div>
 
-                      <div className="relative overflow-hidden w-full h-full">
                 <img 
                   src="https://i.imgur.com/1byCoqA.png"
                   alt="Hero Image"
                   className="relative overflow-hidden w-full h-full"
                 />
-                
-                {/* Glass overlay for extra effect */}
-              </div>
         
         {/* Animated floating elements */}
         <div className="absolute top-20 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>

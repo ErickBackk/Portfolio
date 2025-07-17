@@ -4,7 +4,7 @@ export const videos = [
     title: "Ronaldenho",
     thumbnail: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CJzet8MG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLCLM2r_NTjnpvSr1Q8j3nq6mTgKQQ",
     thumbnailstatic: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CJzet8MG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLCLM2r_NTjnpvSr1Q8j3nq6mTgKQQ",
-    category: "amv",
+    category: "motion",
     description: ""
   },
   {

@@ -20,7 +20,7 @@ function App() {
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-400 via-cyan-500 to-teal-600"></div>
 
-                      <div className="absolute inset-0 w-full h-full">
+                      <div className="relative inset-0 w-full h-full">
                 <img 
                   src="https://i.imgur.com/1byCoqA.png"
                   alt="Hero Image"

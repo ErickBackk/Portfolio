@@ -145,6 +145,16 @@ function App() {
               >
                 GAMEPLAY
               </button>
+              <button 
+                onClick={() => setActiveCategory('motion')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  activeCategory === 'motion' 
+                    ? 'bg-[#000000] text-white shadow-lg shadow-blue-500/20' 
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                MOTION
+              </button>
             </div>
           </div>
           

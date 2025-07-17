@@ -3,7 +3,7 @@ export const videos = [
     id: "fK8sxLx11wo",
     title: "MINISTÉRIO DA SAUDE ADVERTE: VALORANT FAZ MAL A SANIDADE MENTAL",
     thumbnail: "https://i.ytimg.com/an_webp/fK8sxLx11wo/mqdefault_6s.webp?du=3000&sqp=CPyF5MMG&rs=AOn4CLCAjCUJ03AzuNMsIcywhHjoUrsZiQ",
-    thumbnailstatic: "https://i.ytimg.com/an_webp/fK8sxLx11wo/mqdefault_6s.webp?du=3000&sqp=CPyF5MMG&rs=AOn4CLCAjCUJ03AzuNMsIcywhHjoUrsZiQ",
+    thumbnailstatic: "https://i.ytimg.com/vi/fK8sxLx11wo/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAGKV_x17rmGL_SBJg7ZaiGKr8sgQ",
     category: "gameplay",
     description: ""
   },

@@ -22,12 +22,12 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   
   return (
     <div 
-      className="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+      className="group cursor-pointer backdrop-blur-sm bg-[#000514]/20 rounded-lg p-4 border border-slate-800/50 hover:border-slate-700/50 transition-all duration-300 hover:bg-[#000514]/30"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video thumbnail */}
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative aspect-video mb-4 overflow-hidden rounded-lg bg-[#000514]/60">
         <img 
           src={isHovered ? video.thumbnail : (video.thumbnailstatic || video.thumbnail)}
           alt={video.title} 
@@ -44,41 +44,38 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
             rel="noopener noreferrer"
             className="w-full h-full flex items-center justify-center"
           >
-            <div className="bg-white/90 hover:bg-white rounded-full p-3 transition-colors">
-              <Play size={20} fill="currentColor" className="ml-0.5 text-gray-800" />
+            <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-colors">
+              <Play size={24} fill="white" className="ml-1" />
             </div>
           </a>
         </div>
         
         {/* Category badge */}
-        <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-xs font-medium px-2 py-1 rounded-full text-gray-700">
+        <div className="absolute top-3 right-3 bg-[#000514]/80 backdrop-blur-sm text-xs font-medium px-2 py-1 rounded text-slate-300">
           {video.category.toUpperCase()}
         </div>
       </div>
       
       {/* Video info */}
-      <div className="p-4">
-        <h3 className="text-gray-800 font-medium line-clamp-2 leading-snug mb-2 text-sm">
+      <div className="space-y-2">
+        <h3 className="text-white font-medium line-clamp-2 leading-snug">
           {video.title}
         </h3>
         
         {video.description && (
-          <p className="text-gray-600 text-xs line-clamp-2 mb-3">
+          <p className="text-slate-400 text-sm line-clamp-2">
             {video.descriptionKey ? t(video.descriptionKey) : video.description}
           </p>
         )}
         
-        <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500">by @Backk</span>
-          <a 
-            href={`https://www.youtube.com/watch?v=${video.id}`} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 transition-colors text-xs font-medium"
-          >
-            <ExternalLink size={12} />
-          </a>
-        </div>
+        <a 
+          href={`https://www.youtube.com/watch?v=${video.id}`} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-slate-400 hover:text-white transition-colors text-sm"
+        >
+          {t('videos.watch')} <ExternalLink size={12} />
+        </a>
       </div>
     </div>
   );

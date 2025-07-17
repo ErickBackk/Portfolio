@@ -99,7 +99,7 @@ function App() {
               {/* Large image placeholder with glass morphism frame */}
               <div className="relative w-96 h-96 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-4 shadow-2xl">
                 <img 
-                  src="https://imgur.com/a/58FM07T"
+                  src="https://imgur.com/1byCoqA"
                   alt="Hero Image"
                   className="w-full h-full object-cover rounded-2xl"
                 />

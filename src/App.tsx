@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Youtube, Camera } from 'lucide-react';
+import { Youtube, Camera, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import VideoCard from './components/VideoCard';
@@ -15,162 +15,197 @@ function App() {
     : videos.filter(video => video.category === activeCategory);
 
   return (
-    <div className="min-h-screen text-white relative">
-      {/* Animated background with smooth transitions */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-[#000514] to-[#000000]"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-blue-400/2 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-600/3 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden z-10">
-        {/* Section-specific background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/90 via-[#000514]/60 to-transparent"></div>
-        
-        {/* Hero-specific light effects */}
-        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl animate-pulse"></div>
-        
-        <div className="relative z-20 text-center max-w-2xl mx-auto px-4">
-          {/* Profile image */}
-          <div className="mb-8">
-            <img 
-              src="https://yt3.googleusercontent.com/xIwL1F5HTg0c7zhkajS9YeeM03P9qU5y8UOHir2uQWkxngr5ffbEVCgMfcdNl4XC3dZnphg4=s160-c-k-c0x00ffffff-no-rj" 
-              alt="EuSouOBackk" 
-              className="w-24 h-24 rounded-full mx-auto border border-slate-700 shadow-2xl shadow-blue-500/20"
-            />
-          </div>
-          
-          {/* Title and subtitle */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-2 text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-            Backk
-          </h1>
-          <p className="text-slate-400 text-lg mb-2" style={{ fontFamily: 'Roboto, system-ui, sans-serif' }}>
-            {t('hero.creator')}
-          </p>
-          <p className="text-slate-500 mb-12" style={{ fontFamily: 'Roboto, system-ui, sans-serif' }}>
-            {t('hero.editor')}
-          </p>
-          
-          {/* Action buttons */}
-          <div className="flex gap-4 justify-center">
-            <a 
-              href="https://www.youtube.com/@EuSouOBackk" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 border-2 border-red-600 hover:border-red-500 hover:bg-red-600/10 transition-all px-6 py-3 rounded-lg text-sm font-medium text-red-600 hover:text-red-500"
-            >
-              <Youtube size={18} />
-              {t('hero.youtube')}
-            </a>
-            <a 
-              href="#videos" 
-              className="flex items-center gap-2 border border-slate-700 hover:border-slate-600 hover:bg-[#000514]/50 transition-all px-6 py-3 rounded-lg text-sm font-medium"
-            >
-              <Camera size={18} />
-              {t('hero.videos')}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="relative py-24 px-4 z-10">
-        {/* Section transition overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000514]/40 to-transparent"></div>
-        
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-6 text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-            {t('about.title')}
-          </h2>
-          <p className="text-slate-400 text-lg leading-relaxed relative z-10">
-            {t('about.description')}
-          </p>
-        </div>
-      </section>
-
-      {/* Videos Section */}
-      <section id="videos" className="relative py-24 px-4 z-10">
-        {/* Section-specific background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000000]/60 to-[#000514]/40"></div>
-        
+      <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-12 text-center text-white relative z-10" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-            {t('videos.title')}
-          </h2>
-          
-          {/* Category filter */}
-          <div className="flex justify-center mb-16 relative z-10">
-            <div className="inline-flex bg-[#000514]/80 backdrop-blur-sm border border-slate-800 rounded-lg p-1 shadow-lg shadow-blue-500/10">
-              <button 
-                onClick={() => setActiveCategory('all')}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                  activeCategory === 'all' 
-                    ? 'bg-[#000000] text-white shadow-lg shadow-blue-500/20' 
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                {t('videos.all')}
-              </button>
-              <button 
-                onClick={() => setActiveCategory('mmv')}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                  activeCategory === 'mmv' 
-                    ? 'bg-[#000000] text-white shadow-lg shadow-blue-500/20' 
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                MMV
-              </button>
-              <button 
-                onClick={() => setActiveCategory('amv')}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                  activeCategory === 'amv' 
-                    ? 'bg-[#000000] text-white shadow-lg shadow-blue-500/20' 
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                AMV
-              </button>
-              <button 
-                onClick={() => setActiveCategory('gameplay')}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                  activeCategory === 'gameplay' 
-                    ? 'bg-[#000000] text-white shadow-lg shadow-blue-500/20' 
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                GAMEPLAY
-              </button>
-              <button 
-                onClick={() => setActiveCategory('motion')}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                  activeCategory === 'motion' 
-                    ? 'bg-[#000000] text-white shadow-lg shadow-blue-500/20' 
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                MOTION
-              </button>
+          {/* Hero Card */}
+          <div className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 overflow-hidden shadow-2xl">
+            {/* Background decorative elements */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-2xl"></div>
+            
+            {/* Navigation arrows */}
+            <button className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors">
+              <ChevronLeft className="text-white" size={20} />
+            </button>
+            <button className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors">
+              <ChevronRight className="text-white" size={20} />
+            </button>
+            
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+              {/* Left content */}
+              <div className="flex-1 text-center md:text-left">
+                <div className="mb-6">
+                  <img 
+                    src="https://yt3.googleusercontent.com/xIwL1F5HTg0c7zhkajS9YeeM03P9qU5y8UOHir2uQWkxngr5ffbEVCgMfcdNl4XC3dZnphg4=s160-c-k-c0x00ffffff-no-rj" 
+                    alt="EuSouOBackk" 
+                    className="w-16 h-16 rounded-full mx-auto md:mx-0 border-2 border-white/30"
+                  />
+                </div>
+                
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+                  Backk
+                </h1>
+                <p className="text-white/90 text-lg mb-8 max-w-md" style={{ fontFamily: 'Roboto, system-ui, sans-serif' }}>
+                  {t('hero.creator')} & {t('hero.editor')}. {t('about.description')}
+                </p>
+                
+                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105">
+                  {t('hero.videos')}
+                </button>
+              </div>
+              
+              {/* Right content - Character illustration placeholder */}
+              <div className="flex-1 flex justify-center md:justify-end">
+                <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <Camera size={64} className="text-white/60" />
+                </div>
+              </div>
+            </div>
+            
+            {/* Progress dots */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
+              <div className="w-8 h-2 bg-white rounded-full"></div>
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
             </div>
           </div>
-          
-          {/* Video grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-            {filteredVideos.map((video, index) => (
-              <VideoCard key={index} video={video} />
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Footer transition section */}
-      <div className="relative h-32 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]"></div>
-      </div>
+      {/* Main Content */}
+      <section className="px-4 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-4 gap-8">
+            {/* Left Sidebar - Videos */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-gray-800" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+                  {t('videos.title')} <span className="text-blue-600">›</span>
+                </h2>
+              </div>
+              
+              {/* Video Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                {filteredVideos.slice(0, 4).map((video, index) => (
+                  <VideoCard key={index} video={video} />
+                ))}
+              </div>
+              
+              <button className="w-full bg-white hover:bg-gray-50 text-gray-700 py-3 rounded-2xl font-medium transition-colors shadow-sm border border-gray-200">
+                View More
+              </button>
+            </div>
+            
+            {/* Center - Category Filter */}
+            <div className="lg:col-span-1">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                {t('videos.all')} Categories
+              </h3>
+              
+              <div className="space-y-3">
+                <button 
+                  onClick={() => setActiveCategory('all')}
+                  className={`w-full text-left px-4 py-3 rounded-2xl font-medium transition-all ${
+                    activeCategory === 'all' 
+                      ? 'bg-gray-800 text-white' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+                  }`}
+                >
+                  🎬 {t('videos.all')}
+                </button>
+                <button 
+                  onClick={() => setActiveCategory('mmv')}
+                  className={`w-full text-left px-4 py-3 rounded-2xl font-medium transition-all ${
+                    activeCategory === 'mmv' 
+                      ? 'bg-gray-800 text-white' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+                  }`}
+                >
+                  🎵 MMV
+                </button>
+                <button 
+                  onClick={() => setActiveCategory('amv')}
+                  className={`w-full text-left px-4 py-3 rounded-2xl font-medium transition-all ${
+                    activeCategory === 'amv' 
+                      ? 'bg-gray-800 text-white' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+                  }`}
+                >
+                  🎌 AMV
+                </button>
+                <button 
+                  onClick={() => setActiveCategory('gameplay')}
+                  className={`w-full text-left px-4 py-3 rounded-2xl font-medium transition-all ${
+                    activeCategory === 'gameplay' 
+                      ? 'bg-gray-800 text-white' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+                  }`}
+                >
+                  🎮 Gameplay
+                </button>
+                <button 
+                  onClick={() => setActiveCategory('motion')}
+                  className={`w-full text-left px-4 py-3 rounded-2xl font-medium transition-all ${
+                    activeCategory === 'motion' 
+                      ? 'bg-gray-800 text-white' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
+                  }`}
+                >
+                  ✨ Motion
+                </button>
+              </div>
+            </div>
+            
+            {/* Right Sidebar - Featured Content */}
+            <div className="lg:col-span-1">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Featured</h3>
+              
+              <div className="space-y-4">
+                {/* Featured items */}
+                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                      <Youtube className="text-white" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">YouTube Channel</h4>
+                      <p className="text-sm text-gray-600">Latest uploads and content</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
+                      <Camera className="text-white" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Latest Work</h4>
+                      <p className="text-sm text-gray-600">Recent video projects and edits</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center">
+                      <span className="text-white font-bold">AE</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">After Effects</h4>
+                      <p className="text-sm text-gray-600">Professional video editing and motion graphics</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

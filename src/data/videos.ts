@@ -18,8 +18,8 @@ export const videos = [
   {
     id: "bMKGWxg2jec",
     title: "Ronaldenho",
-    thumbnail: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CJzet8MG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLCLM2r_NTjnpvSr1Q8j3nq6mTgKQQ",
-    thumbnailstatic: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CJzet8MG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLCLM2r_NTjnpvSr1Q8j3nq6mTgKQQ",
+    thumbnail: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CLiI5MMG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLDvC1blq7ZLjcUJKDNVLoJu7aRrNw",
+    thumbnailstatic: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CLiI5MMG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLDvC1blq7ZLjcUJKDNVLoJu7aRrNw",
     category: "motion",
     description: ""
   },

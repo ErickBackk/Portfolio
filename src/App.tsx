@@ -31,15 +31,6 @@ function App() {
         {/* Section-specific background overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/90 via-[#000514]/60 to-transparent"></div>
         
-        {/* Background image with overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://cdn.discordapp.com/attachments/824606051743039528/1346577207476359251/Comp1_1-ezgif.com-video-to-webp-converter.webp?ex=67c8b140&is=67c75fc0&hm=6c4ec315bf3f7ce6a709193ae0788124937628034eca0409d5b018b730e478d3&" 
-            alt="EuSouOBackk" 
-            className="w-full h-full object-cover opacity-10"
-          />
-        </div>
-        
         {/* Hero-specific light effects */}
         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl animate-pulse"></div>
         
@@ -143,6 +134,16 @@ function App() {
                 }`}
               >
                 AMV
+              </button>
+              <button 
+                onClick={() => setActiveCategory('gameplay')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  activeCategory === 'gameplay' 
+                    ? 'bg-[#000000] text-white shadow-lg shadow-blue-500/20' 
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                GAMEPLAY
               </button>
             </div>
           </div>

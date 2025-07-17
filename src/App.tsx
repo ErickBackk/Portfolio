@@ -95,15 +95,20 @@ function App() {
           
           {/* Right side - Decorative element */}
           <div className="relative hidden md:block">
-            <div className="relative">
-              {/* Large decorative circle */}
-              <div className="w-96 h-96 border-2 border-white/20 rounded-full backdrop-blur-sm bg-white/5 flex items-center justify-center">
-                <div className="w-64 h-64 border border-white/30 rounded-full backdrop-blur-md bg-white/10 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-white/20 to-transparent rounded-full backdrop-blur-lg"></div>
-                </div>
+            <div className="relative w-full h-full flex items-center justify-center">
+              {/* Large image placeholder with glass morphism frame */}
+              <div className="relative w-96 h-96 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-4 shadow-2xl">
+                <img 
+                  src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+                  alt="Hero Image"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+                
+                {/* Glass overlay for extra effect */}
+                <div className="absolute inset-4 rounded-2xl bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
               </div>
               
-              {/* Floating elements around circle */}
+              {/* Floating elements around image */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-cyan-300/40 rounded-full animate-bounce"></div>
               <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-teal-300/40 rounded-full animate-bounce delay-500"></div>
               <div className="absolute top-1/2 -left-8 w-4 h-4 bg-white/40 rounded-full animate-pulse"></div>
@@ -114,7 +119,7 @@ function App() {
 
       {/* About Section */}
       <section className="relative py-24 px-4 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-600/20 via-cyan-500/30 to-teal-500/20"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-12 shadow-2xl">
@@ -130,7 +135,7 @@ function App() {
 
       {/* Videos Section */}
       <section id="videos" className="relative py-24 px-4 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-500/20 via-cyan-600/40 to-teal-700/50"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-3xl font-semibold mb-12 text-center text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
@@ -204,7 +209,7 @@ function App() {
 
       {/* Footer transition */}
       <div className="relative h-32 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-700/50 to-teal-900/80"></div>
       </div>
 
       <Footer />

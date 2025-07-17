@@ -10,8 +10,8 @@ export const videos = [
     {
     id: "o6q6oWERX3s",
     title: "Alto nivel de gameplay",
-    thumbnail: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CJzet8MG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLCLM2r_NTjnpvSr1Q8j3nq6mTgKQQ",
-    thumbnailstatic: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CJzet8MG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLCLM2r_NTjnpvSr1Q8j3nq6mTgKQQ",
+    thumbnail: "https://i.ytimg.com/vi/o6q6oWERX3s/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgRyhAMA8=&rs=AOn4CLAViEkkk0CVQ00a5qv1dfRj6eWssg",
+    thumbnailstatic: "https://i.ytimg.com/vi/o6q6oWERX3s/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgRyhAMA8=&rs=AOn4CLAViEkkk0CVQ00a5qv1dfRj6eWssg",
     category: "gameplay",
     description: ""
   },

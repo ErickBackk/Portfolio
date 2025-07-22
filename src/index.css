@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Noise filter for the entire site */
-body::before {
+/* Film grain noise effect */
+html::before {
   content: '';
   position: fixed;
   top: 0;
@@ -11,12 +11,15 @@ body::before {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 9999;
-  opacity: 0.03;
-  background-image: 
-    radial-gradient(circle at 20% 50%, transparent 20%, rgba(255,255,255,0.3) 21%, rgba(255,255,255,0.3) 34%, transparent 35%, transparent),
-    linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.05) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05) 76%, transparent 77%, transparent);
-  background-size: 3px 3px;
+  z-index: 10000;
+  opacity: 0.08;
+  background: 
+    repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(255,255,255,0.1) 1deg, transparent 2deg),
+    repeating-linear-gradient(0deg, transparent, rgba(255,255,255,0.05) 1px, transparent 2px),
+    repeating-linear-gradient(90deg, transparent, rgba(255,255,255,0.05) 1px, transparent 2px),
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 4px 4px, 2px 2px, 2px 2px, 20px 20px, 20px 20px;
   animation: noise 0.2s infinite;
 }
 

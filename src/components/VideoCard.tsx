@@ -51,7 +51,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         </div>
         
         {/* Category badge */}
-        <div className="absolute top-3 right-3 backdrop-blur-md bg-gradient-to-r from-purple-500/80 to-blue-500/80 border border-white/20 text-xs font-bold px-3 py-1 rounded-full text-white shadow-lg">
+        <div className="absolute top-3 right-3 backdrop-blur-md bg-gradient-to-r from-purple-500/80 to-purple-600/80 border border-white/20 text-xs font-bold px-3 py-1 rounded-full text-white shadow-lg">
           {video.category.toUpperCase()}
         </div>
       </div>
@@ -72,7 +72,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
           href={`https://www.youtube.com/watch?v=${video.id}`} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-all text-sm backdrop-blur-sm bg-white/10 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20 px-4 py-2 rounded-lg border border-white/20 hover:border-purple-400/30 transform hover:scale-105"
+          className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-all text-sm backdrop-blur-sm bg-white/10 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-purple-500/20 px-4 py-2 rounded-lg border border-white/20 hover:border-purple-400/30 transform hover:scale-105"
         >
           {t('videos.watch')} <ExternalLink size={14} />
         </a>

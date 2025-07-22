@@ -79,14 +79,14 @@ function App() {
                   href="https://www.youtube.com/@EuSouOBackk" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-red-500/25 transform hover:scale-105"
+                  className="flex items-center gap-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-colors duration-200 px-6 py-3 rounded-xl font-medium shadow-lg"
                 >
                   <Youtube size={20} />
                   {t('hero.youtube')}
                 </a>
                 <a 
                   href="#videos" 
-                  className="flex items-center gap-3 backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-purple-500/25 transform hover:scale-105"
+                  className="flex items-center gap-3 bg-white/10 border border-white/20 hover:bg-white/20 transition-colors duration-200 px-6 py-3 rounded-xl font-medium shadow-lg"
                 >
                   <Camera size={20} />
                   {t('hero.videos')}
@@ -126,7 +126,7 @@ function App() {
           
           {/* Category filter */}
           <div className="flex justify-center mb-16">
-            <div className="inline-flex backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-2 shadow-2xl">
+            <div className="inline-flex bg-white/5 border border-white/10 rounded-2xl p-2 shadow-xl">
               {[
                 { key: 'all', label: t('videos.all') },
                 { key: 'mmv', label: 'MMV' },
@@ -137,9 +137,9 @@ function App() {
                 <button 
                   key={key}
                   onClick={() => setActiveCategory(key)}
-                  className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
+                  className={`px-6 py-3 rounded-xl text-sm font-medium transition-colors duration-200 ${
                     activeCategory === key 
-                      ? 'bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg transform scale-105' 
+                      ? 'bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg' 
                       : 'text-white/70 hover:text-white hover:bg-white/10'
                   }`}
                 >

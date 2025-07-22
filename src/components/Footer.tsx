@@ -6,13 +6,13 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="relative border-t border-white/20 py-12 z-10 backdrop-blur-xl bg-teal-900/60">
-      <div className="max-w-7xl mx-auto px-4">
+    <footer className="relative border-t border-white/10 py-12 z-10 backdrop-blur-xl bg-slate-900/80">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Left side */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-2 justify-center md:justify-start mb-2">
-              <span className="text-lg font-medium text-white">Backk</span>
+              <span className="text-lg font-semibold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">Backk</span>
             </div>
             <p className="text-white/70 text-sm max-w-md">
               {t('footer.description')}
@@ -25,7 +25,7 @@ const Footer = () => {
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm backdrop-blur-sm bg-white/10 border border-white/20 px-3 py-2 rounded-lg"
+              className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm backdrop-blur-sm bg-white/10 border border-white/20 hover:border-red-400/50 px-3 py-2 rounded-lg"
             >
               <Youtube size={16} />
               YouTube

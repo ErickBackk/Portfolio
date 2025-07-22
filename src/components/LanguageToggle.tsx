@@ -8,7 +8,7 @@ const LanguageToggle = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/30 px-3 py-2 rounded-lg hover:bg-white/20"
+      className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm backdrop-blur-sm bg-white/10 border border-white/20 hover:border-purple-400/50 px-3 py-2 rounded-lg hover:bg-white/20"
       title={language === 'pt-BR' ? 'Switch to English' : 'Mudar para Português'}
     >
       <Languages size={14} />

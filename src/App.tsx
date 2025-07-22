@@ -15,117 +15,120 @@ function App() {
     : videos.filter(video => video.category === activeCategory);
 
   return (
-    <div className="min-h-screen text-white relative overflow-hidden">
-      {/* Main background with teal gradient */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+      {/* Animated background elements */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-400 via-cyan-500 to-teal-600"></div>
+        {/* Gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 right-1/3 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
         
-        {/* Animated floating elements */}
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-cyan-300/15 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-teal-300/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
-        {/* Decorative geometric shapes */}
-        <div className="absolute top-1/4 right-1/3 w-32 h-32 border border-white/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-        <div className="absolute bottom-1/3 left-1/4 w-24 h-24 border border-cyan-300/30 rounded-lg rotate-45 animate-pulse"></div>
-        
-        {/* Floating particles */}
-        <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-white/40 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/3 left-2/3 w-1 h-1 bg-cyan-200/60 rounded-full animate-bounce delay-500"></div>
-        <div className="absolute bottom-1/2 right-1/3 w-1.5 h-1.5 bg-teal-200/50 rounded-full animate-bounce delay-1000"></div>
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="w-full h-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
       </div>
       
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center z-10">
-        {/* Glass morphism overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
-        
-        <div className="relative z-20 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <section className="relative min-h-screen flex items-center justify-center z-10 pt-20">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Content */}
-          <div className="text-left">
-            {/* Glass morphism card for profile */}
-            <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl">
-              <div className="flex items-center gap-6 mb-6">
-                <img 
-                  src="https://yt3.googleusercontent.com/xIwL1F5HTg0c7zhkajS9YeeM03P9qU5y8UOHir2uQWkxngr5ffbEVCgMfcdNl4XC3dZnphg4=s160-c-k-c0x00ffffff-no-rj" 
-                  alt="EuSouOBackk" 
-                  className="w-20 h-20 rounded-full border-2 border-white/30 shadow-lg"
-                />
+          <div className="space-y-8">
+            {/* Profile card */}
+            <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl">
+              <div className="flex items-center gap-6 mb-8">
+                <div className="relative">
+                  <img 
+                    src="https://yt3.googleusercontent.com/xIwL1F5HTg0c7zhkajS9YeeM03P9qU5y8UOHir2uQWkxngr5ffbEVCgMfcdNl4XC3dZnphg4=s160-c-k-c0x00ffffff-no-rj" 
+                    alt="EuSouOBackk" 
+                    className="w-24 h-24 rounded-full border-2 border-purple-400/50 shadow-lg"
+                  />
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-400 rounded-full border-2 border-slate-900 animate-pulse"></div>
+                </div>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2 text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+                  <h1 className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
                     Backk
                   </h1>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 text-green-400">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-white/80 text-sm">Online</span>
+                    <span className="text-sm font-medium">Online</span>
                   </div>
                 </div>
               </div>
               
-              <p className="text-white/90 text-lg mb-2" style={{ fontFamily: 'Roboto, system-ui, sans-serif' }}>
-                {t('hero.creator')}
-              </p>
-              <p className="text-white/70 mb-8" style={{ fontFamily: 'Roboto, system-ui, sans-serif' }}>
-                {t('hero.editor')}
-              </p>
+              <div className="space-y-4 mb-8">
+                <p className="text-xl text-white/90 font-medium">
+                  {t('hero.creator')}
+                </p>
+                <p className="text-white/70 text-lg">
+                  {t('hero.editor')}
+                </p>
+              </div>
               
-              {/* Action buttons with glass effect */}
-              <div className="flex gap-4">
+              {/* Action buttons */}
+              <div className="flex flex-wrap gap-4">
                 <a 
                   href="https://www.youtube.com/@EuSouOBackk" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 backdrop-blur-md bg-white/10 border-2 border-red-500/60 hover:border-red-400 hover:bg-red-500/20 transition-all px-6 py-3 rounded-xl text-sm font-medium text-white shadow-lg"
+                  className="flex items-center gap-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-red-500/25 transform hover:scale-105"
                 >
-                  <Youtube size={18} />
+                  <Youtube size={20} />
                   {t('hero.youtube')}
                 </a>
                 <a 
                   href="#videos" 
-                  className="flex items-center gap-2 backdrop-blur-md bg-white/10 border border-white/30 hover:border-white/50 hover:bg-white/20 transition-all px-6 py-3 rounded-xl text-sm font-medium text-white shadow-lg"
+                  className="flex items-center gap-3 backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-purple-500/25 transform hover:scale-105"
                 >
-                  <Camera size={18} />
+                  <Camera size={20} />
                   {t('hero.videos')}
                 </a>
               </div>
             </div>
           </div>
           
-          {/* Right side - Decorative element */}
-          <div className="relative hidden md:block">
-            <div className="relative w-5000 h-5000 flex items-center justify-center">
-              {/* Large image placeholder with glass morphism frame */}
-              <div className="relative w-5000 h-5000">
+          {/* Right side - Large image */}
+          <div className="relative hidden lg:block">
+            <div className="relative">
+              {/* Main image container */}
+              <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-4 shadow-2xl">
                 <img 
-                  src="https://i.imgur.com/1byCoqA.png"
+                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt="Hero Image"
-                  className="w-full h-full"
+                  className="w-full h-96 object-cover rounded-2xl"
                 />
                 
-                {/* Glass overlay for extra effect */}
+                {/* Decorative overlay */}
+                <div className="absolute inset-4 rounded-2xl bg-gradient-to-t from-purple-900/50 via-transparent to-transparent pointer-events-none"></div>
               </div>
               
-              {/* Floating elements around image */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-cyan-300/40 rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-teal-300/40 rounded-full animate-bounce delay-500"></div>
-              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-white/40 rounded-full animate-pulse"></div>
+              {/* Floating decorative elements */}
+              <div className="absolute -top-6 -right-6 w-12 h-12 bg-purple-500/30 rounded-full backdrop-blur-sm border border-white/20 animate-bounce"></div>
+              <div className="absolute -bottom-8 -left-8 w-8 h-8 bg-blue-500/30 rounded-full backdrop-blur-sm border border-white/20 animate-bounce delay-500"></div>
+              <div className="absolute top-1/2 -left-4 w-6 h-6 bg-indigo-500/30 rounded-full backdrop-blur-sm border border-white/20 animate-pulse"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="relative py-24 px-4 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-600/20 via-cyan-500/30 to-teal-500/20"></div>
+      <section className="relative py-24 px-6 z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-transparent"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-12 shadow-2xl">
-            <h2 className="text-3xl font-semibold mb-6 text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-12 shadow-2xl">
+            <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
               {t('about.title')}
             </h2>
-            <p className="text-white/80 text-lg leading-relaxed">
+            <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">
               {t('about.description')}
             </p>
           </div>
@@ -133,67 +136,36 @@ function App() {
       </section>
 
       {/* Videos Section */}
-      <section id="videos" className="relative py-24 px-4 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-500/20 via-cyan-600/40 to-teal-700/50"></div>
+      <section id="videos" className="relative py-24 px-6 z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-slate-900/50"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl font-semibold mb-12 text-center text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+          <h2 className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
             {t('videos.title')}
           </h2>
           
-          {/* Category filter with glass morphism */}
+          {/* Category filter */}
           <div className="flex justify-center mb-16">
-            <div className="inline-flex backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-2 shadow-2xl">
-              <button 
-                onClick={() => setActiveCategory('all')}
-                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
-                  activeCategory === 'all' 
-                    ? 'bg-white/20 text-white shadow-lg backdrop-blur-md' 
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {t('videos.all')}
-              </button>
-              <button 
-                onClick={() => setActiveCategory('mmv')}
-                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
-                  activeCategory === 'mmv' 
-                    ? 'bg-white/20 text-white shadow-lg backdrop-blur-md' 
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                MMV
-              </button>
-              <button 
-                onClick={() => setActiveCategory('amv')}
-                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
-                  activeCategory === 'amv' 
-                    ? 'bg-white/20 text-white shadow-lg backdrop-blur-md' 
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                AMV
-              </button>
-              <button 
-                onClick={() => setActiveCategory('gameplay')}
-                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
-                  activeCategory === 'gameplay' 
-                    ? 'bg-white/20 text-white shadow-lg backdrop-blur-md' 
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                GAMEPLAY
-              </button>
-              <button 
-                onClick={() => setActiveCategory('motion')}
-                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
-                  activeCategory === 'motion' 
-                    ? 'bg-white/20 text-white shadow-lg backdrop-blur-md' 
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                MOTION
-              </button>
+            <div className="inline-flex backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-2 shadow-2xl">
+              {[
+                { key: 'all', label: t('videos.all') },
+                { key: 'mmv', label: 'MMV' },
+                { key: 'amv', label: 'AMV' },
+                { key: 'gameplay', label: 'GAMEPLAY' },
+                { key: 'motion', label: 'MOTION' }
+              ].map(({ key, label }) => (
+                <button 
+                  key={key}
+                  onClick={() => setActiveCategory(key)}
+                  className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
+                    activeCategory === key 
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg transform scale-105' 
+                      : 'text-white/70 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
             </div>
           </div>
           
@@ -205,11 +177,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Footer transition */}
-      <div className="relative h-32 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-700/50 to-teal-900/80"></div>
-      </div>
 
       <Footer />
     </div>

@@ -39,14 +39,14 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-4">
             <a 
               href="#" 
-              className="backdrop-blur-sm bg-white/10 border border-white/20 hover:border-purple-400/50 p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/20 transition-all"
+              className="bg-white/10 border border-white/20 hover:border-purple-400/50 p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/20 transition-colors duration-200"
               title={t('nav.home')}
             >
               <Home size={18} />
             </a>
             <a 
               href="#videos" 
-              className="backdrop-blur-sm bg-white/10 border border-white/20 hover:border-purple-400/50 p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/20 transition-all"
+              className="bg-white/10 border border-white/20 hover:border-purple-400/50 p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/20 transition-colors duration-200"
               title={t('nav.videos')}
             >
               <Video size={18} />
@@ -55,7 +55,7 @@ const Navbar = () => {
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="backdrop-blur-sm bg-white/10 border border-white/20 hover:border-red-400/50 p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/20 transition-all"
+              className="bg-white/10 border border-white/20 hover:border-red-400/50 p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/20 transition-colors duration-200"
               title="YouTube"
             >
               <Youtube size={18} />
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden backdrop-blur-sm bg-white/10 border border-white/20 p-2 rounded-lg text-white/80 hover:text-white transition-all"
+            className="md:hidden bg-white/10 border border-white/20 p-2 rounded-lg text-white/80 hover:text-white transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -75,11 +75,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden backdrop-blur-xl bg-slate-900/90 border-t border-white/10">
+        <div className="md:hidden bg-slate-900/90 border-t border-white/10">
           <div className="px-6 py-4 space-y-4">
             <a 
               href="#" 
-              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors backdrop-blur-sm bg-white/10 border border-white/20 p-3 rounded-lg"
+              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors duration-200 bg-white/10 border border-white/20 p-3 rounded-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               <Home size={18} />
@@ -87,7 +87,7 @@ const Navbar = () => {
             </a>
             <a 
               href="#videos" 
-              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors backdrop-blur-sm bg-white/10 border border-white/20 p-3 rounded-lg"
+              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors duration-200 bg-white/10 border border-white/20 p-3 rounded-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               <Video size={18} />
@@ -97,7 +97,7 @@ const Navbar = () => {
               href="https://www.youtube.com/@EuSouOBackk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors backdrop-blur-sm bg-white/10 border border-white/20 p-3 rounded-lg"
+              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors duration-200 bg-white/10 border border-white/20 p-3 rounded-lg"
             >
               <Youtube size={18} />
               <span>YouTube</span>

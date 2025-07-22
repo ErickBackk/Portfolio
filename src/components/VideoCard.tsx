@@ -22,7 +22,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   
   return (
     <div 
-      className="group cursor-pointer backdrop-blur-xl bg-white/5 rounded-2xl border border-white/10 hover:border-purple-400/30 transition-all duration-300 hover:bg-white/10 shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 transform hover:-translate-y-2 overflow-hidden"
+      className="group cursor-pointer backdrop-blur-sm bg-white/5 rounded-2xl border border-white/10 hover:border-purple-400/30 transition-all duration-200 hover:bg-white/10 shadow-lg hover:shadow-xl transform hover:-translate-y-1 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -31,11 +31,11 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
         <img 
           src={isHovered ? video.thumbnail : (video.thumbnailstatic || video.thumbnail)}
           alt={video.title} 
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         
         {/* Play overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center transition-opacity duration-300 ${
+        <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent flex items-center justify-center transition-opacity duration-200 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
           <a 
@@ -44,14 +44,14 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
             rel="noopener noreferrer"
             className="w-full h-full flex items-center justify-center"
           >
-            <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-full p-4 hover:bg-white/30 transition-all shadow-2xl transform hover:scale-110">
+            <div className="bg-white/20 border border-white/30 rounded-full p-4 hover:bg-white/30 transition-all duration-200 shadow-lg">
               <Play size={28} fill="white" className="ml-1" />
             </div>
           </a>
         </div>
         
         {/* Category badge */}
-        <div className="absolute top-3 right-3 backdrop-blur-md bg-gradient-to-r from-purple-500/80 to-purple-600/80 border border-white/20 text-xs font-bold px-3 py-1 rounded-full text-white shadow-lg">
+        <div className="absolute top-3 right-3 bg-purple-500/80 border border-white/20 text-xs font-bold px-3 py-1 rounded-full text-white">
           {video.category.toUpperCase()}
         </div>
       </div>
@@ -72,7 +72,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
           href={`https://www.youtube.com/watch?v=${video.id}`} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-all text-sm backdrop-blur-sm bg-white/10 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-purple-500/20 px-4 py-2 rounded-lg border border-white/20 hover:border-purple-400/30 transform hover:scale-105"
+          className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 text-sm bg-white/10 hover:bg-purple-500/20 px-4 py-2 rounded-lg border border-white/20 hover:border-purple-400/30"
         >
           {t('videos.watch')} <ExternalLink size={14} />
         </a>

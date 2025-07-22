@@ -3,35 +3,75 @@
 @tailwind utilities;
 
 /* Film grain noise effect */
-html::before {
+body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
-  z-index: 10000;
-  opacity: 0.08;
-  background: 
-    repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(255,255,255,0.1) 1deg, transparent 2deg),
-    repeating-linear-gradient(0deg, transparent, rgba(255,255,255,0.05) 1px, transparent 2px),
-    repeating-linear-gradient(90deg, transparent, rgba(255,255,255,0.05) 1px, transparent 2px),
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
-    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
-  background-size: 4px 4px, 2px 2px, 2px 2px, 20px 20px, 20px 20px;
-  animation: noise 0.2s infinite;
+  z-index: 9999;
+  opacity: 0.15;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.2) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.15) 1px, transparent 1px),
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle at 10% 90%, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle at 90% 50%, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 3px 3px, 4px 4px, 2px 2px, 5px 5px, 3px 3px;
+  background-position: 0 0, 1px 1px, 2px 2px, 0 1px, 1px 0;
+  animation: noise 0.5s infinite linear;
 }
 
 @keyframes noise {
-  0%, 100% { transform: translate(0, 0) }
-  10% { transform: translate(-1px, -1px) }
-  20% { transform: translate(1px, -1px) }
-  30% { transform: translate(-1px, 1px) }
-  40% { transform: translate(1px, 1px) }
-  50% { transform: translate(-1px, -1px) }
-  60% { transform: translate(1px, -1px) }
-  70% { transform: translate(-1px, 1px) }
-  80% { transform: translate(1px, 1px) }
-  90% { transform: translate(-1px, -1px) }
+  0% { 
+    transform: translate(0, 0);
+    background-position: 0 0, 1px 1px, 2px 2px, 0 1px, 1px 0;
+  }
+  25% { 
+    transform: translate(-1px, 1px);
+    background-position: 1px 0, 0 1px, 1px 2px, 2px 1px, 0 0;
+  }
+  50% { 
+    transform: translate(1px, -1px);
+    background-position: 2px 1px, 1px 0, 0 1px, 1px 2px, 2px 0;
+  }
+  75% { 
+    transform: translate(-1px, -1px);
+    background-position: 0 2px, 2px 1px, 1px 0, 0 1px, 1px 2px;
+  }
+  100% { 
+    transform: translate(0, 0);
+    background-position: 0 0, 1px 1px, 2px 2px, 0 1px, 1px 0;
+  }
+}
+
+/* Additional subtle texture */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.05;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255,255,255,0.03) 1px,
+      rgba(255,255,255,0.03) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(255,255,255,0.03) 1px,
+      rgba(255,255,255,0.03) 2px
+    );
+  background-size: 2px 2px;
 }

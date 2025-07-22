@@ -40,11 +40,11 @@ function App() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center z-10 pt-20">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Content */}
-          <div className="space-y-8">
+          {/* Centered Content */}
+          <div className="space-y-8 lg:col-span-2 max-w-4xl mx-auto text-center">
             {/* Profile card */}
             <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl">
-              <div className="flex items-center gap-6 mb-8">
+              <div className="flex items-center gap-6 mb-8 justify-center">
                 <div className="relative">
                   <img 
                     src="https://yt3.googleusercontent.com/xIwL1F5HTg0c7zhkajS9YeeM03P9qU5y8UOHir2uQWkxngr5ffbEVCgMfcdNl4XC3dZnphg4=s160-c-k-c0x00ffffff-no-rj" 
@@ -74,7 +74,7 @@ function App() {
               </div>
               
               {/* Action buttons */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <a 
                   href="https://www.youtube.com/@EuSouOBackk" 
                   target="_blank" 
@@ -96,26 +96,6 @@ function App() {
           </div>
           
           {/* Right side - Large image */}
-          <div className="relative hidden lg:block">
-            <div className="relative">
-              {/* Main image container */}
-              <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-4 shadow-2xl">
-                <img 
-                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Hero Image"
-                  className="w-full h-96 object-cover rounded-2xl"
-                />
-                
-                {/* Decorative overlay */}
-                <div className="absolute inset-4 rounded-2xl bg-gradient-to-t from-purple-900/50 via-transparent to-transparent pointer-events-none"></div>
-              </div>
-              
-              {/* Floating decorative elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-purple-500/30 rounded-full backdrop-blur-sm border border-white/20 animate-bounce"></div>
-              <div className="absolute -bottom-8 -left-8 w-8 h-8 bg-blue-500/30 rounded-full backdrop-blur-sm border border-white/20 animate-bounce delay-500"></div>
-              <div className="absolute top-1/2 -left-4 w-6 h-6 bg-indigo-500/30 rounded-full backdrop-blur-sm border border-white/20 animate-pulse"></div>
-            </div>
-          </div>
         </div>
       </section>
 

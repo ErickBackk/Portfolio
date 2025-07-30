@@ -142,13 +142,13 @@ const Contact = () => {
 
 						<div>
 							<label
-								htmlFor='message'
+								htmlFor='text'
 								className='block mb-2 text-sm font-medium text-gray-300'>
 								Message
 							</label>
 							<textarea
-								id='message'
-								name='message'
+								id='text'
+								name='text'
 								value={formData.text}
 								onChange={handleChange}
 								required

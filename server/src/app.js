@@ -1,7 +1,7 @@
-import { configDotenv } from 'dotenv';
 import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
+import { configDotenv } from 'dotenv';
 
 configDotenv();
 
@@ -43,4 +43,6 @@ app.post('/api/send', (req, res) => {
 		});
 });
 
-export default app;
+app.listen(PORT, () => console.log('server listening on port', PORT));
+
+export default app

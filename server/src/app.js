@@ -15,6 +15,8 @@ const GMAIL_PORT = process.env.GMAIL_PORT;
 const user = process.env.EMAIL;
 const pass = process.env.PASSWORD;
 
+app.get('/', (req,res) => res.send('E-MAIL'))
+
 app.post('/api/send', (req, res) => {
 	const { replyTo, subject, text, email } = req.body;
 

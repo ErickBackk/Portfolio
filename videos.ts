@@ -2,7 +2,7 @@ export const videos = [
         {
     id: "Hq8JcCSOYRI",
     title: "Ain't it fun?",
-    thumbnail: "https://i.ytimg.com/vi/Hq8JcCSOYRI/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AG-B4AC0AWKAgwIABABGHIgQig6MA8=&rs=AOn4CLAZ86HDyAL0GUzznw2bh_o94xrrlg",
+    thumbnail: "https://res.cloudinary.com/dp2g5s41b/image/upload/v1753938629/AinItfUN_ov2qaa.webp",
     thumbnailstatic: "https://i.ytimg.com/vi/Hq8JcCSOYRI/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AG-B4AC0AWKAgwIABABGHIgQig6MA8=&rs=AOn4CLAZ86HDyAL0GUzznw2bh_o94xrrlg",
     category: "motion",
     description: ""

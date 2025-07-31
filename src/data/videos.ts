@@ -26,8 +26,8 @@ export const videos = [
   {
     id: "bMKGWxg2jec",
     title: "Ronaldenho",
-    thumbnail: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CLiI5MMG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLDvC1blq7ZLjcUJKDNVLoJu7aRrNw",
-    thumbnailstatic: "https://i9.ytimg.com/vi/bMKGWxg2jec/mqdefault.jpg?sqp=CLiI5MMG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEwgVShlMA8=&rs=AOn4CLDvC1blq7ZLjcUJKDNVLoJu7aRrNw",
+    thumbnail: "https://palestrasdesucesso.com.br/?attachment_id=20570",
+    thumbnailstatic: "https://palestrasdesucesso.com.br/?attachment_id=20570",
     category: "motion",
     description: ""
   },

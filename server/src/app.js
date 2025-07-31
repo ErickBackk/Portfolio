@@ -43,4 +43,4 @@ app.post('/api/send', (req, res) => {
 		});
 });
 
-app.listen(PORT, () => console.log('server listening on port', PORT));
+export default app;

@@ -26,8 +26,8 @@ export const videos = [
   {
     id: "bMKGWxg2jec",
     title: "Ronaldenho",
-    thumbnail: "https://palestrasdesucesso.com.br/?attachment_id=20570",
-    thumbnailstatic: "https://palestrasdesucesso.com.br/?attachment_id=20570",
+    thumbnail: "https://palestrasdesucesso.com.br/wp-content/uploads/2022/06/ronaldinho-gaucho-palestras.jpg",
+    thumbnailstatic: "https://palestrasdesucesso.com.br/wp-content/uploads/2022/06/ronaldinho-gaucho-palestras.jpg",
     category: "motion",
     description: ""
   },

@@ -1,4 +1,44 @@
 export const videos = [
+                {
+    id: "W8I1ohAiqM8",
+    title: "Multa 100 Mil Reais - Eumismo",
+    thumbnail: "https://i9.ytimg.com/vi/W8I1ohAiqM8/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGAgYChgMA8=&rs=AOn4CLAkNEjYT00MMNMfCNiRjkv3GQNuvA",
+    thumbnailstatic: "https://i9.ytimg.com/vi/W8I1ohAiqM8/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGAgYChgMA8=&rs=AOn4CLAkNEjYT00MMNMfCNiRjkv3GQNuvA",
+    category: "motion",
+    description: ""
+  },       
+        {
+    id: "PQb7ak-6OHQ",
+    title: "Tríade Sombria Parte 1 - Eumismo",
+    thumbnail: "https://i9.ytimg.com/vi/PQb7ak-6OHQ/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gOShLMA8=&rs=AOn4CLDBDrQo0Fs2y5En0AUtdO_xpuKDjA",
+    thumbnailstatic: "https://i9.ytimg.com/vi/PQb7ak-6OHQ/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gOShLMA8=&rs=AOn4CLDBDrQo0Fs2y5En0AUtdO_xpuKDjA",
+    category: "motion",
+    description: ""
+  },       
+        {
+    id: "IQy2JM3vUI4",
+    title: "Tríade Sombria Parte 2 - Eumismo",
+    thumbnail: "https://i9.ytimg.com/vi/IQy2JM3vUI4/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gNChaMA8=&rs=AOn4CLB80V0Wpbnz2r2TPET_sS4MTm6aTw",
+    thumbnailstatic: "https://i9.ytimg.com/vi/IQy2JM3vUI4/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gNChaMA8=&rs=AOn4CLB80V0Wpbnz2r2TPET_sS4MTm6aTw",
+    category: "motion",
+    description: ""
+  },      
+        {
+    id: "aiMVEbMLbkg",
+    title: "Da Terra A Lua Parte 1 - Eumismo",
+    thumbnail: "https://i9.ytimg.com/vi/aiMVEbMLbkg/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE4gUShlMA8%3D&rs=AOn4CLBDxUzqThVTKkWZq5TcPkYd2pPtqQ&retry=5",
+    thumbnailstatic: "https://i9.ytimg.com/vi/aiMVEbMLbkg/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE4gUShlMA8%3D&rs=AOn4CLBDxUzqThVTKkWZq5TcPkYd2pPtqQ&retry=5",
+    category: "motion",
+    description: ""
+  },      
+        {
+    id: "cR0VEraaajI",
+    title: "Da Terra a lua Parte 2 - Eumismo",
+    thumbnail: "https://i9.ytimg.com/vi/cR0VEraaajI/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgNCh_MA8%3D&rs=AOn4CLCtUfxjLLdSK6LzzTDLCi-8cgVMog&retry=5",
+    thumbnailstatic: "https://i9.ytimg.com/vi/cR0VEraaajI/mqdefault.jpg?sqp=CKiVr8UG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgNCh_MA8%3D&rs=AOn4CLCtUfxjLLdSK6LzzTDLCi-8cgVMog&retry=5",
+    category: "motion",
+    description: ""
+  },
         {
     id: "Hq8JcCSOYRI",
     title: "Ain't it fun?",
